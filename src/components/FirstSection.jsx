@@ -1,11 +1,13 @@
 import React from "react";
 import Logo from "../assets/images/management-banner-img.png"
+import Shape from "../assets/images/moving-shape.svg"
+
 
 const FirstSection = () => {
   return (
-    <section class="mx-auto w-full px-2 sm:px-6 lg:px-8 relative mt-12 mb-12 flex flex-column">
+    <section class="mx-auto  w-full px-2 sm:px-6 lg:px-8 relative mt-12 mb-24 flex flex-column">
       <img
-        src="../assets/images/moving-shape.svg"
+        src={Shape}
         class="absolute top-0 right-0 z-0 w-[60%]"
         alt=""
       />
