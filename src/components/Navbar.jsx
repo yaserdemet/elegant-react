@@ -19,7 +19,7 @@ const Navbar = () => {
             >
               <span class="sr-only">Open main menu</span>
 
-              <i class={show ? "fa-solid fa-xmark" : "fa-solid fa-bars"}></i> 
+              <i class={show ? "fa-solid fa-xmark px-1  transition duration-300 ease-out" : "fa-solid fa-bars"}></i> 
           
             </button>
           </div>
@@ -95,7 +95,7 @@ const Navbar = () => {
         <div class="space-y-1 px-2 pt-2 pb-3  ">
           <a
             href="#"
-            class="text-black hover:bg-mainColor  hover:text-white block px-3 py-2 rounded-md font-medium transition duration-300 ease-out hover:ease-in"
+            class="text-black hover:bg-mainColor  hover:text-white block px-3 py-2 text-center rounded-md font-medium transition duration-300 ease-out hover:ease-in"
             aria-current="page"
           >
             Dashboard
@@ -103,21 +103,21 @@ const Navbar = () => {
 
           <a
             href="#"
-            class="text-black hover:bg-mainColor hover:text-white block px-3 py-2 rounded-md text-base font-medium transition duration-300 ease-out hover:ease-in"
+            class= "text-black text-center hover:bg-mainColor hover:text-white block px-3 py-2 rounded-md text-base font-medium transition duration-300 ease-out hover:ease-in"
           >
             Team
           </a>
 
           <a
             href="#"
-            class="text-black hover:bg-mainColor hover:text-white block px-3 py-2 rounded-md text-base font-medium transition duration-300 ease-out hover:ease-in"
+            class="text-black text-center hover:bg-mainColor hover:text-white block px-3 py-2 rounded-md text-base font-medium transition duration-300 ease-out hover:ease-in"
           >
             Projects
           </a>
 
           <a
             href="#"
-            class="text-black hover:bg-mainColor hover:text-white block px-3 py-2 rounded-md   font-medium transition duration-300 ease-out hover:ease-in"
+            class="text-black text-center hover:bg-mainColor hover:text-white block px-3 py-2 rounded-md   font-medium transition duration-300 ease-out hover:ease-in"
           >
             Contact
           </a>

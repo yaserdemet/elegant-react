@@ -14,6 +14,9 @@ module.exports = {
         "mainFont": "Arial, sanserif",
         "secondary": "Poppins",
       },
+      rotate: {
+        '360': '360deg',
+      }
     },
   },
   plugins: [],
