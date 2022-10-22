@@ -52,3 +52,16 @@
     align-items: center;
   }
 }
+
+.cards {
+  display: flex;
+  flex-direction: row;
+  justify-content: start;
+  /* align-items: center; */
+  flex-wrap: wrap;
+ /* border: 2px red solid; */
+}
+
+.x {
+  border: 2px red solid;
+}
