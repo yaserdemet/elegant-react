@@ -1,20 +1,20 @@
-import icon1 from "../assets/images/icons/mf1.png";
-import icon2 from "../assets/images/icons/mf2.png";
-import icon3 from "../assets/images/icons/mf3.png";
-import icon4 from "../assets/images/icons/mf4.png";
-import icon5 from "../assets/images/icons/mf5.png";
-import icon6 from "../assets/images/icons/mf6.png";
-import icon7 from "../assets/images/icons/mf7.png";
-import icon8 from "../assets/images/icons/mf8.png";
+import icon1 from "../assets/icons/icons/mf1.png";
+import icon2 from "../assets/icons/icons/mf2.png";
+import icon3 from "../assets/icons/icons/mf3.png";
+import icon4 from "../assets/icons/icons/mf4.png";
+import icon5 from "../assets/icons/icons/mf5.png";
+import icon6 from "../assets/icons/icons/mf6.png";
+import icon7 from "../assets/icons/icons/mf7.png";
+import icon8 from "../assets/icons/icons/mf8.png";
 
 const icon1Text = "Task Views";
-const icon2Text = "Task Views";
-const icon3Text = "Task Views";
-const icon4Text = "Task Views";
-const icon5Text = "Task Views";
-const icon6Text = "Task Views";
-const icon7Text = "Task Views";
-const icon8Text = "Task Views";
+const icon2Text = "Checklist";
+const icon3Text = "Timesheets";
+const icon4Text = "Assign Project";
+const icon5Text = "Task History";
+const icon6Text = "Dashboard";
+const icon7Text = "Task Board";
+const icon8Text = "Attach Files";
 
 export const iconDatas = [
   {
