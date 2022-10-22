@@ -3,7 +3,7 @@ import React from "react";
 const Cards = () => {
   return (
     <div className="bg-[#f5f8ff] mt-24 pb-36 mb-6 p-8 ">
-      <h4 className="text-center md:text-3xl sm:text-xl font-semibold mb-16 text-blue-600">
+      <h4 className="text-center md:text-3xl sm:text-xl font-semibold mb-16 text-[#625fd1]">
         Why Choose Elegant Software
       </h4>
 

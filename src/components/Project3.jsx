@@ -1,24 +1,23 @@
 import React from "react";
-import Project from "../assets/images/feature22.png";
+import Project from "../assets/images/feature44.png";
 
-const Projects = () => {
+const Project3 = () => {
   return (
-    <section className="mx-24  mt-24  mb-36 ">
+    <section className="mx-24  mt-24  mb-24 ">
       <div className="grid grid-cols-2 gap-24 projects">
         <div className="">
           <img src={Project} alt="Project" />
         </div>
 
         <div className=" ">
-          <h4 className="text-[#625fd1] text-4xl leading-10 font-semibold mb-8 ">
-            Plan Project In Details With The Task Timeline
+          <h4 className="text-[#625fd1] text-4xl leading-10  mb-8 ">
+          View, Organize And Prioritize Your Team Task
           </h4>
           <p className="text-left text-[#707070] mb-8 text-xl">
-            Pellentesque habitant morbi tristique senectus et netus et malesuada
-            fames ac turpis egestas. Ut arcu libero.
+          Phasellus dignissim, tellus in pellentesque mollis, mauris orci dignissim nisl, id gravida nunc enim quis nibh. Maecenas convallis eros a ante dignissim, vitae elementum metus facilisis. Cras in maximus sem. Praesent libero augue, ornare eget quam sed, volutpat suscipit arcu.
           </p>
 
-          <h5 className="font-medium text-2xl text-[#292929] mb-4">
+          {/* <h5 className="font-medium text-2xl text-[#292929] mb-4">
             Set Project Deadline
           </h5>
 
@@ -32,7 +31,7 @@ const Projects = () => {
           <p className="text-left text-[#707070] mb-8 text-xl">
             Aliquam in bibendum mauris. Sed vitae erat vel velit blandit
             pharetra vitae nec ante. Cras at est augue.
-          </p>
+          </p> */}
           <div>
             <button
               type="button"
@@ -47,4 +46,4 @@ const Projects = () => {
   );
 };
 
-export default Projects;
+export default Project3;
