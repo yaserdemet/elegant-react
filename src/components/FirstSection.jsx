@@ -5,7 +5,7 @@ import Shape from "../assets/images/moving-shape.svg"
 
 const FirstSection = () => {
   return (
-    <section class="mx-auto  w-full px-2 sm:px-6 lg:px-8 relative mt-12 mb-24 flex flex-column">
+    <section id="to-top" class="mx-auto  w-full px-2 sm:px-6 lg:px-8 relative mt-12 mb-24 flex flex-column">
       <img
         src={Shape}
         class="absolute top-0 right-0 z-0 w-[60%]"

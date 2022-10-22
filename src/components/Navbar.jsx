@@ -1,11 +1,13 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import Logo1 from "../assets/images/logo-bg-white.png";
 import Logo2 from "../assets/images/logo-bg-dark.png";
 
 const Navbar = () => {
     const [show , setShow] = React.useState(false)
+  
+
   return (
-    <nav>
+    <nav id="navbar">
       <div class="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8">
         <div class="relative flex h-16 items-center justify-around">
           <div class="absolute inset-y-0 left-0 flex items-center sm:hidden">
