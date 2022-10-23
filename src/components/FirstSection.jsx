@@ -4,9 +4,9 @@ import Shape from "../assets/images/moving-shape.svg"
 import {motion} from "framer-motion"
 import Typewriter from 'typewriter-effect';
 const FirstSection = () => {
-  return (
+  return ( 
     <motion.section 
-    initial={{opacity : 0 , }}
+       initial={{opacity : 0 , }}
         animate={{opacity : 1 , }}
         transition={{duration : 3 , type : "spring"}}
     id="to-top" class="mx-auto  w-full px-2 sm:px-6 lg:px-8 relative mt-12 mb-24 flex flex-column">

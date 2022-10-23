@@ -1,13 +1,41 @@
 import React from "react";
+import { animate, motion, useAnimation } from "framer-motion";
+import { useInView } from "react-intersection-observer";
+import { useEffect } from "react";
+
+ 
+
 
 const Cards = () => {
+  const { ref, inView } = useInView();
+  
+  const animation = useAnimation()
+
+useEffect(()=>{
+    if(inView){
+      animation.start({
+        x : 0, 
+       
+        transition : {
+          type : "spring" , duration : 3, bounce : 0.3,
+        }
+       })
+    }
+
+    if(!inView){
+      animation.start({
+        x : "100vw"
+      })
+    }
+     
+} , [inView])
   return (
-    <div className="bg-[#f5f8ff] mt-24 pb-36 mb-6 p-8 ">
+    <div ref={ref} className="bg-[#f5f8ff] mt-24 pb-36 mb-6 p-8 ">
       <h4 className="text-center md:text-3xl sm:text-xl font-semibold mb-16 text-[#625fd1]">
         Why Choose Elegant Software
       </h4>
 
-      <div class="flex flex-wrap gap-6 justify-center ">
+      <motion.div animate={animation} class="flex flex-wrap gap-6 justify-center ">
         <div class="max-w-sm ml-0  bg-white rounded-[18px] border  border-gray-200 shadow-md p-12">
           <div className="flex justify-center bg-red-50 border rounded-[12px] w-48 px-4 py-8 mx-auto  mb-4">
             <svg
@@ -336,7 +364,7 @@ const Cards = () => {
             </a>
           </div>
         </div>
-      </div>
+      </motion.div>
     </div>
   );
 };

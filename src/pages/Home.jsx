@@ -41,8 +41,7 @@ const Home = () => {
   }
 
   return (
-    <motion.div
-    initial={{backdropFilter: "grayscale(100%)" , }}
+    <div
     >
       {!isVisible && (
         <a
@@ -64,7 +63,7 @@ const Home = () => {
       <AnimatedCard />
       <Questions />
      
-    </motion.div>
+    </div>
   );
 };
 
