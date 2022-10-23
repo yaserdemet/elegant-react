@@ -1,7 +1,7 @@
 {
     "nav1" : "Home",
-    "nav2" : "Characters",
-    "nav3" : "Detaıls",
-    "btn" : "Sıgn In",
+    "nav2" : "Team",
+    "nav3" : "Projects",
+    "nav4" : "Contact",
     "btn1" : "Sign Out"
 }

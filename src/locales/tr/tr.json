@@ -1,7 +1,6 @@
 {
     "nav1" : "Anasayfa",
-    "nav2" : "Karakterler",
-    "nav3" : "Detaylar",
-    "btn" : "Giriş Yap",
-    "btn1" : "Çıkış Yap"
+    "nav2" : "Takım",
+    "nav3" : "Projeler",
+    "nav4" : "İletişim"
 }

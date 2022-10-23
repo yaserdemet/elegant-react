@@ -3,6 +3,7 @@ import Logo1 from "../assets/images/logo-bg-white.png";
 // import Logo2 from "../assets/images/logo-bg-dark.png";
 import { useTranslation } from "react-i18next";
 import { useConsumeContext } from "../helpers/contextApi/ContextFile";
+import {motion} from "framer-motion"
 
 const Navbar = () => {
   const { lang, setLang, changeLanguage } = useConsumeContext();
@@ -24,9 +25,6 @@ const Navbar = () => {
       window.removeEventListener("scroll", controlNavbar);
     };
   }, []);
-
-
-
 
   return (
     <nav>
@@ -58,10 +56,16 @@ const Navbar = () => {
                 src={Logo1}
                 alt="Your Company"
               />
-              <img
+              <motion.img
                 class="hidden h-8 w-auto lg:block cursor-pointer"
                 src={Logo1}
                 alt="Elegant Software"
+                animate={{scale : 1}}
+                initial={{scale : 0}}
+                transition={{duration : 2}}
+                // whileHover={{scale : 1.5}}
+                
+                
               />
             </div>
             <div class="hidden sm:ml-6 sm:block">
@@ -78,27 +82,39 @@ const Navbar = () => {
                   href="#"
                   class="text-black hover:bg-mainColor hover:text-white px-3 py-2 rounded-md text-xl font-medium transition duration-300 ease-out hover:ease-in"
                 >
-                  Team
+                  {t("nav2")}
                 </a>
 
                 <a
                   href="#"
                   class="text-black hover:bg-mainColor hover:text-white px-3 py-2 rounded-md text-xl font-medium transition duration-300 ease-out hover:ease-in"
                 >
-                  Projects
+                  {t("nav3")}
                 </a>
 
                 <a
                   href="#"
                   class="text-black hover:bg-mainColor hover:text-white px-3 py-2 rounded-md text-xl font-medium transition duration-300 ease-out hover:ease-in"
                 >
-                  Contact
+                  {t("nav4")}
                 </a>
 
-                <select name="" id="" onChange={(e) => changeLanguage(e.target.value)}>
-                  <option value={lang} >Eng</option>
-                  <option value="tr" >Tur</option>
+                <select
+                  name=""
+                  className="block  px-8  text-sm text-gray-500  border-0  appearance-none dark:border-mainColor focus:outline-mainColor  focus:border-mainColor "
+                  id=""
+                  onChange={(e) => changeLanguage(e.target.value)}
+                >
+                  
+                  <option className="border-none" disabled value="">
+                    Select Language
+                  </option>
+                  <option className="text-black" value={lang}>
+                    English
+                  </option>
+                  <option value="tr" className="hover:bg-mainColor px-16">Türkçe</option>
                 </select>
+                
               </div>
             </div>
           </div>
@@ -163,3 +179,6 @@ const Navbar = () => {
 };
 
 export default Navbar;
+
+
+

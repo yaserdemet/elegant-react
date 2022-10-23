@@ -7,6 +7,8 @@ import Project2 from "../components/Project2";
 import Project3 from "../components/Project3";
 import AnimatedCard from "../components/AnimatedCard";
 import Questions from "../components/Questions";
+import Wave from "../components/Wave";
+
 
 const Home = () => {
   const [isVisible, setIsVisible] = useState(true);
@@ -49,6 +51,7 @@ const Home = () => {
           <i className="fa fa-angle-up text-white"></i>{" "}
         </a>
       )}
+      <Wave />
       <FirstSection />
       <IconSection />
       <Cards />
@@ -57,6 +60,7 @@ const Home = () => {
       <Project3 />
       <AnimatedCard />
       <Questions />
+     
     </div>
   );
 };
