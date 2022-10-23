@@ -6,12 +6,14 @@ import Projects from "../components/Projects";
 import Project2 from "../components/Project2";
 import Project3 from "../components/Project3";
 import AnimatedCard from "../components/AnimatedCard";
+import Questions from "../components/Questions";
 
 const Home = () => {
   const [isVisible, setIsVisible] = useState(true);
 
   useEffect(() => {
     window.addEventListener("scroll", listenToScroll);
+    console.log("dadwad")
     return () => window.removeEventListener("scroll", listenToScroll);
   }, []);
 
@@ -28,11 +30,19 @@ const Home = () => {
     }
   };
 
+  const handleClick = () => {
+    window.scrollTo({
+      top : 0,
+      behavior : "smooth"
+    })
+  }
+
   return (
     <div>
       {!isVisible && (
         <a
-          href="#navbar"
+        onClick={handleClick}
+          // href="#navbar"
           className="hover:animate-pulse bottom-10 bg-[#ff4d8c] flex justify-center items-center rounded-full right-10 z-10 fixed w-[45px] h-[45px]"
         >
           {" "}
@@ -46,6 +56,7 @@ const Home = () => {
       <Project2 />
       <Project3 />
       <AnimatedCard />
+      <Questions />
     </div>
   );
 };

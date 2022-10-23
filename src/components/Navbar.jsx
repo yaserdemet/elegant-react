@@ -1,13 +1,30 @@
 import React, { useEffect, useState } from "react";
 import Logo1 from "../assets/images/logo-bg-white.png";
-import Logo2 from "../assets/images/logo-bg-dark.png";
-
+// import Logo2 from "../assets/images/logo-bg-dark.png";
+import { useTranslation } from "react-i18next";
+ 
 const Navbar = () => {
-    const [show , setShow] = React.useState(false)
-  
+
+  const {t, i18n} = useTranslation()
+
+  const [show, setShow] = useState(false);
+  const controlNavbar = () => {
+    if (window.scrollY > 250) {
+      setShow(true);
+    } else {
+      setShow(false);
+    }
+  };
+
+  useEffect(() => {
+    window.addEventListener("scroll", controlNavbar);
+    return () => {
+      window.removeEventListener("scroll", controlNavbar);
+    };
+  }, []);
 
   return (
-    <nav id="navbar">
+    <nav >
       <div class="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8">
         <div class="relative flex h-16 items-center justify-around">
           <div class="absolute inset-y-0 left-0 flex items-center sm:hidden">
@@ -17,12 +34,16 @@ const Navbar = () => {
               class="inline-flex items-center  hover:bg-mainColor justify-center rounded-md p-2 text-gray-400 transition duration-300 ease-out hover:ease-in hover:text-white focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white"
               aria-controls="mobile-menu"
               aria-expanded="false"
-             
             >
               <span class="sr-only">Open main menu</span>
 
-              <i class={show ? "fa-solid fa-xmark px-1  transition duration-300 ease-out" : "fa-solid fa-bars"}></i> 
-          
+              <i
+                class={
+                  show
+                    ? "fa-solid fa-xmark px-1  transition duration-300 ease-out"
+                    : "fa-solid fa-bars"
+                }
+              ></i>
             </button>
           </div>
           <div class="flex flex-1 gap-4 items-center justify-center sm:items-stretch sm:justify-start">
@@ -45,7 +66,7 @@ const Navbar = () => {
                   class="text-black hover:bg-mainColor hover:text-white  px-3 py-2 rounded-md text-xl transition duration-300 ease-out hover:ease-in font-medium"
                   aria-current="page"
                 >
-                  Dashboard
+                  {t("nav1")}
                 </a>
 
                 <a
@@ -68,6 +89,12 @@ const Navbar = () => {
                 >
                   Contact
                 </a>
+
+                <select name="" id="">
+                  <option value="">Eng</option>
+                  <option value="">Tur</option>
+
+                </select>
               </div>
             </div>
           </div>
@@ -92,40 +119,40 @@ const Navbar = () => {
       </div>
 
       <div class="sm:hidden " id="mobile-menu">
+        <div
+          class={show ? "block " : "hidden transition duration-300 ease-out "}
+        >
+          <div class="space-y-1 px-2 pt-2 pb-3  ">
+            <a
+              href="#"
+              class="text-black hover:bg-mainColor  hover:text-white block px-3 py-2 text-center rounded-md font-medium transition duration-300 ease-out hover:ease-in"
+              aria-current="page"
+            >
+              Dashboard
+            </a>
 
-        <div class={show ? "block " : "hidden transition duration-300 ease-out " }>
-        <div class="space-y-1 px-2 pt-2 pb-3  ">
-          <a
-            href="#"
-            class="text-black hover:bg-mainColor  hover:text-white block px-3 py-2 text-center rounded-md font-medium transition duration-300 ease-out hover:ease-in"
-            aria-current="page"
-          >
-            Dashboard
-          </a>
+            <a
+              href="#"
+              class="text-black text-center hover:bg-mainColor hover:text-white block px-3 py-2 rounded-md text-base font-medium transition duration-300 ease-out hover:ease-in"
+            >
+              Team
+            </a>
 
-          <a
-            href="#"
-            class= "text-black text-center hover:bg-mainColor hover:text-white block px-3 py-2 rounded-md text-base font-medium transition duration-300 ease-out hover:ease-in"
-          >
-            Team
-          </a>
+            <a
+              href="#"
+              class="text-black text-center hover:bg-mainColor hover:text-white block px-3 py-2 rounded-md text-base font-medium transition duration-300 ease-out hover:ease-in"
+            >
+              Projects
+            </a>
 
-          <a
-            href="#"
-            class="text-black text-center hover:bg-mainColor hover:text-white block px-3 py-2 rounded-md text-base font-medium transition duration-300 ease-out hover:ease-in"
-          >
-            Projects
-          </a>
-
-          <a
-            href="#"
-            class="text-black text-center hover:bg-mainColor hover:text-white block px-3 py-2 rounded-md   font-medium transition duration-300 ease-out hover:ease-in"
-          >
-            Contact
-          </a>
+            <a
+              href="#"
+              class="text-black text-center hover:bg-mainColor hover:text-white block px-3 py-2 rounded-md   font-medium transition duration-300 ease-out hover:ease-in"
+            >
+              Contact
+            </a>
+          </div>
         </div>
-        </div>
- 
       </div>
     </nav>
   );
