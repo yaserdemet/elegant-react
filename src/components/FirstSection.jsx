@@ -1,11 +1,15 @@
 import React from "react";
 import Logo from "../assets/images/management-banner-img.png"
 import Shape from "../assets/images/moving-shape.svg"
-
-
+import {motion} from "framer-motion"
+import Typewriter from 'typewriter-effect';
 const FirstSection = () => {
   return (
-    <section id="to-top" class="mx-auto  w-full px-2 sm:px-6 lg:px-8 relative mt-12 mb-24 flex flex-column">
+    <motion.section 
+    initial={{opacity : 0 , }}
+        animate={{opacity : 1 , }}
+        transition={{duration : 3 , type : "spring"}}
+    id="to-top" class="mx-auto  w-full px-2 sm:px-6 lg:px-8 relative mt-12 mb-24 flex flex-column">
       <img
         src={Shape}
         class="absolute top-0 right-0 z-0 w-[60%]"
@@ -15,9 +19,21 @@ const FirstSection = () => {
       <div class="w-full relative mt-12 flex flex-row justify-around res">
         <div class="z-10 relative w-[40%] first">
           <h1 class="text-blue-400 font-bold  text-4xl leading-[3.5rem] sm:text-center lg:text-left">
-            The #1 Software Tools <br />
+            {/* The #1 Software Tools <br />
             To Manage Team <br />
-            Project & Task
+            Project & Task */}
+
+<Typewriter
+  options={{
+    strings: ['The #1 Software Tools To Manage Team Project & Task' ],
+    autoStart: true,
+    loop: true,
+    // delay : 500,
+    speed : 700
+  
+  }}
+  
+/>
           </h1>
           <p class="mt-6 text-[#707070] font-[20px] leading-9 text-2xl">
             Phasellus dignissim, tellus in pellentesque mollis, mauris orci
@@ -51,7 +67,7 @@ const FirstSection = () => {
           />
         </div>
       </div>
-    </section>
+    </motion.section>
   );
 };
 

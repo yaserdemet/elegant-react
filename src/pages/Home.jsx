@@ -8,6 +8,7 @@ import Project3 from "../components/Project3";
 import AnimatedCard from "../components/AnimatedCard";
 import Questions from "../components/Questions";
 import Wave from "../components/Wave";
+import {motion} from "framer-motion"
 
 
 const Home = () => {
@@ -40,7 +41,9 @@ const Home = () => {
   }
 
   return (
-    <div>
+    <motion.div
+    initial={{backdropFilter: "grayscale(100%)" , }}
+    >
       {!isVisible && (
         <a
         onClick={handleClick}
@@ -61,7 +64,7 @@ const Home = () => {
       <AnimatedCard />
       <Questions />
      
-    </div>
+    </motion.div>
   );
 };
 

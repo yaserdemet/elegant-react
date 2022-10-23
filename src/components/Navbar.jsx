@@ -62,7 +62,7 @@ const Navbar = () => {
                 alt="Elegant Software"
                 animate={{scale : 1}}
                 initial={{scale : 0}}
-                transition={{duration : 2}}
+                transition={{duration : 2 ,}}
                 // whileHover={{scale : 1.5}}
                 
                 
