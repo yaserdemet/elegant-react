@@ -2,10 +2,12 @@ import React, { useEffect, useState } from "react";
 import Logo1 from "../assets/images/logo-bg-white.png";
 // import Logo2 from "../assets/images/logo-bg-dark.png";
 import { useTranslation } from "react-i18next";
- 
-const Navbar = () => {
+import { useConsumeContext } from "../helpers/contextApi/ContextFile";
 
-  const {t, i18n} = useTranslation()
+const Navbar = () => {
+  const { lang, setLang, changeLanguage } = useConsumeContext();
+  // console.log(changeLanguage);
+  const { t, i18n } = useTranslation();
 
   const [show, setShow] = useState(false);
   const controlNavbar = () => {
@@ -23,8 +25,11 @@ const Navbar = () => {
     };
   }, []);
 
+
+
+
   return (
-    <nav >
+    <nav>
       <div class="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8">
         <div class="relative flex h-16 items-center justify-around">
           <div class="absolute inset-y-0 left-0 flex items-center sm:hidden">
@@ -90,10 +95,9 @@ const Navbar = () => {
                   Contact
                 </a>
 
-                <select name="" id="">
-                  <option value="">Eng</option>
-                  <option value="">Tur</option>
-
+                <select name="" id="" onChange={(e) => changeLanguage(e.target.value)}>
+                  <option value={lang} >Eng</option>
+                  <option value="tr" >Tur</option>
                 </select>
               </div>
             </div>
