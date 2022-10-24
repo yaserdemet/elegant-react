@@ -6,33 +6,31 @@ import { useEffect } from "react";
 const IconSection = () => {
   // console.log(iconDatas)
   const { ref, inView } = useInView();
-  
-  const animation = useAnimation()
 
-useEffect(()=>{
-    if(inView){
+  const animation = useAnimation();
+
+  useEffect(() => {
+    if (inView) {
       animation.start({
-        x :0,
-        transition : {
-          type : "spring" , duration : 3, bounce : 0.3
-        }
-       })
+        x: 0,
+        transition: {
+          type: "spring",
+          duration: 3,
+          bounce: 0.3,
+        },
+      });
     }
 
-    if(!inView){
+    if (!inView) {
       animation.start({
-        x : "-100vw"
-      })
+        x: "-100vw",
+      });
     }
-     
-} , [inView])
-
+  }, [inView]);
 
   return (
     <section ref={ref} className="mt-36 ">
-      <div 
-    
-      className="flex flex-wrap justify-center mx-24 mb-16 icons">
+      <div className="flex flex-wrap justify-center mx-24 mb-16 icons">
         <div className="w-[70%]">
           <h3 className="text-blue-400 font-bold  text-4xl leading-[3.5rem] sm:text-center lg:text-left md:text-center">
             Give Your Team Tools To Grow
@@ -52,9 +50,10 @@ useEffect(()=>{
         </div>
       </div>
 
-      <motion.div animate={animation} 
-      
-      className="   mx-24 flex  flex-wrap justify-center align-middle gap-x-48 gap-y-12 hover:">
+      <motion.div
+        animate={animation}
+        className="   mx-24 flex  flex-wrap justify-center align-middle gap-x-48 gap-y-12 hover:"
+      >
         {iconDatas.map((item, index) => {
           return (
             <div

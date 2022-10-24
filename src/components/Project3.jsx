@@ -17,21 +17,7 @@ const Project3 = () => {
           Phasellus dignissim, tellus in pellentesque mollis, mauris orci dignissim nisl, id gravida nunc enim quis nibh. Maecenas convallis eros a ante dignissim, vitae elementum metus facilisis. Cras in maximus sem. Praesent libero augue, ornare eget quam sed, volutpat suscipit arcu.
           </p>
 
-          {/* <h5 className="font-medium text-2xl text-[#292929] mb-4">
-            Set Project Deadline
-          </h5>
-
-          <p className="text-left text-[#707070] mb-8 text-xl">
-            Cras gravida bibendum dolor eu varius. Morbi fermentum velit nisl,
-            eget vehicula lorem sodales eget.
-          </p>
-          <h5 className="font-medium text-2xl text-[#292929] mb-4 ">
-            Assign Project To Team
-          </h5>
-          <p className="text-left text-[#707070] mb-8 text-xl">
-            Aliquam in bibendum mauris. Sed vitae erat vel velit blandit
-            pharetra vitae nec ante. Cras at est augue.
-          </p> */}
+  
           <div>
             <button
               type="button"
