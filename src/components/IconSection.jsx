@@ -29,30 +29,36 @@ const IconSection = () => {
   }, [inView]);
 
   return (
-    <section ref={ref} className="mt-36 ">
-      <div className="flex flex-wrap justify-center mx-24 mb-16 icons">
-        <div className="w-[70%]">
-          <h3 className="text-blue-400 font-bold  text-4xl leading-[3.5rem] sm:text-center lg:text-left md:text-center">
+    <section ref={ref} className="mb-36 mt-36 w-[75%] mx-auto">
+      <div className="flex flex-wrap justify-between  lg:gap-0 item mb-16 icons">
+        <div className="md:w-[60%]  sm:w-[90%] ">
+          <h3 className="text-[#625fd1] font-bold sm:text-2xl  lg:text-4xl leading-[3.5rem]  sm:text-center lg:text-left  md:text-center tools">
             Give Your Team Tools To Grow
           </h3>
 
-          <p className="mt-6 w-[70%] text-[#707070] font-light leading-[33px] text-lg sm:text-center lg:text-left">
+          <p className="mt-6 w-[70%]   text-[#707070] font-light leading-[33px] text-lg sm:text-center lg:text-left">
             Vestibulum commodo sapien non elit porttitor, vitae volutpat nibh
             mollis. Nulla porta risus id neque tempor, in efficitur justo
             imperdiet.
           </p>
         </div>
 
-        <div className="mt-8 w-[30%] green-btn ">
-          <button className="focus:outline-none ml-8   text-white bg-mainColor p-6 focus:ring-4 font-medium rounded-full text-sm hover:bg-white hover:text-mainColor transition duration-300 ease-out hover:ease-in hover:border-2 hover:border-mainColor ">
+        <div
+        class="mt-8 w-[30%] flex items-center justify-end green-btn xl:ml-24"
+      >
+        <div class="flex green-btn">
+          <button
+            className=" border border-mainColor text-black hover:bg-mainColor hover:text-white focus:ring-4 transition duration-300 ease-out hover:ease-in font-medium rounded-full text-sm px-7 py-3 mb-2 "
+          >
             See All Features
           </button>
         </div>
       </div>
+      </div>
 
       <motion.div
         animate={animation}
-        className="   mx-24 flex  flex-wrap justify-center align-middle gap-x-48 gap-y-12 hover:"
+        className="grid lg:grid-cols-4 md:grid-cols-3 sm:grid-cols-2  lg:place-items-around sm:place-items-center gap-12 pt-12"
       >
         {iconDatas.map((item, index) => {
           return (
@@ -64,7 +70,7 @@ const IconSection = () => {
                 <img src={item.icon} alt="" />
               </div>
 
-              <p className="p-3 flex justify-center text-base mt-4">
+              <p className="p-3 flex justify-center text-[#292929] text-xl mt-4 font-medium">
                 {" "}
                 {item.text}
               </p>

@@ -1,4 +1,4 @@
-@media screen and (max-width: 992px) {
+/* @media screen and (max-width: 992px) {
   .footer-image {
     display: flex;
     justify-content: center;
@@ -12,7 +12,7 @@
   }
 }
 
-/* * FirstSection Component  */
+
 
 @media screen and (max-width: 992px) {
   .res {
@@ -58,12 +58,146 @@
   flex-wrap: wrap;
 }
 
+
+
+@media screen and (max-width: 992px) {
+  .projects {
+    display: flex;
+    flex-direction: column-reverse;
+  }
+}
+
+@media screen and (max-width: 992px) {
+  .projects2 {
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+
+
+@keyframes animatedCard {
+  0%,
+  100% {
+    transform: translateY(-25%);
+    animation-timing-function: cubic-bezier(0.8, 0, 1, 1);
+  }
+  50% {
+    transform: translateY(0);
+    animation-timing-function: cubic-bezier(0, 0, 0.2, 1);
+  }
+}
+
+.cardAnimate {
+  animation-name: animatedCard;
+  animation-duration: 4s;
+  animation-iteration-count: infinite;
+} */
+
+
+
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Hind+Vadodara&display=swap");
+
+/* font-family: 'Poppins', sans-serif; */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+  list-style-type: none;
+  font-family: "Hind Vadodara", sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+@media screen and (width: 1253) {
+  .firstSection {
+    display: flex !important;
+    flex-direction: row !important;
+  }
+}
+
+@media screen and (max-width: 992px) {
+  .footer-image {
+    display: flex;
+    justify-content: center;
+  }
+}
+
+@media screen and (max-width: 992px) {
+  .reserve {
+    display: flex;
+    justify-content: center;
+  }
+}
+
+/* * FirstSection Component  */
+
+@media screen and (max-width: 1240px) {
+  .res {
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: center;
+    align-items: center;
+    gap: 3rem;
+  }
+  .first {
+    width: 100%;
+    text-align: center;
+  }
+
+  .btns {
+    justify-content: center;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .btns {
+    flex-direction: column;
+  }
+}
+
+@media screen and (max-width: 992px) {
+  .icons {
+    display: flex;
+    justify-content: start;
+    flex-direction: column;
+    align-items: center;
+  }
+  .icons p {
+    width: 100%;
+  }
+
+  .green-btn {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .green-btn button {
+    margin: auto;
+  }
+}
+
+.cards {
+  display: flex;
+  flex-direction: row;
+  justify-content: start;
+  flex-wrap: wrap;
+}
+
 /* project components */
 
 @media screen and (max-width: 992px) {
   .projects {
     display: flex;
     flex-direction: column-reverse;
+    justify-content: center;
+    align-items: flex-end;
   }
 }
 
@@ -92,4 +226,92 @@
   animation-name: animatedCard;
   animation-duration: 4s;
   animation-iteration-count: infinite;
+}
+
+@media screen and (max-width: 992px) {
+  .tools {
+    text-align: center;
+    font-size: 30px;
+  }
+}
+
+@media screen and (max-width: 1844px) {
+  .resp {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+  }
+}
+
+/* Part of faq */
+.tabs input {
+  position: absolute;
+  opacity: 0;
+  z-index: -1;
+}
+
+.row {
+  display: flex;
+}
+.row .col {
+  flex: 1;
+}
+.row .col:last-child {
+  margin-left: 1em;
+}
+
+.tabs {
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.tab {
+ 
+  color: #707070;
+  overflow: hidden;
+  margin-top: 1rem;
+}
+
+.tab-label {
+  display: flex;
+  justify-content: space-between;
+  padding: 1em;
+  background: white;
+  font-weight: bold;
+  cursor: pointer;
+
+}
+.tab-label:hover {
+  background: rgb(218, 245, 236);
+  transition: all 1s;
+}
+.tab-label::after {
+  content: "❯";
+  width: 1em;
+  height: 1em;
+  text-align: center;
+  transition: all 0.35s;
+}
+.tab-content {
+  max-height: 0;
+  padding: 0 1em;
+ 
+  background: white;
+  transition: all 0.35s;
+}
+
+.tab-close {
+  display: flex;
+  justify-content: flex-end;
+  padding: 1em;
+  font-size: 0.75em;
+  cursor: pointer;
+}
+
+input:checked + .tab-label::after {
+  transform: rotate(90deg);
+}
+input:checked ~ .tab-content {
+  max-height: 100vh;
+  padding: 1em;
 }

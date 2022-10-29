@@ -9,14 +9,16 @@ import AnimatedCard from "../components/AnimatedCard";
 import Questions from "../components/Questions";
 import Wave from "../components/Wave";
 import {motion} from "framer-motion"
-
+import blop from "../assets/images/moving-shape.svg"
+import GetDemo from "../components/GetDemo";
+import Cards2 from "../components/Cards2";
 
 const Home = () => {
   const [isVisible, setIsVisible] = useState(true);
 
   useEffect(() => {
     window.addEventListener("scroll", listenToScroll);
-    console.log("dadwad")
+    // console.log("dadwad")
     return () => window.removeEventListener("scroll", listenToScroll);
   }, []);
 
@@ -43,6 +45,11 @@ const Home = () => {
   return (
     <div
     >
+         <img
+      src={blop}
+      class="absolute top-0 right-0 z-[-1] xl:w-[60%] lg:w-[100%]"
+      alt=""
+    />
       {!isVisible && (
         <a
         onClick={handleClick}
@@ -60,6 +67,8 @@ const Home = () => {
       <Projects />
       <Project2 />
       <Project3 />
+      <GetDemo />
+      <Cards2 />
       <AnimatedCard />
       <Questions />
      
