@@ -3,7 +3,7 @@ import React from 'react'
 const GetDemo = () => {
   return (
     <section
-    class="bg-[#5f52dc] py-20 md:text-center mx-auto text-black demos"
+    class="bg-[#5f52dc] dark:!bg-black py-20 md:text-center mx-auto text-black demos"
     
   >
     <div class="">

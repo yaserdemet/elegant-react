@@ -36,24 +36,20 @@ const IconSection = () => {
             Give Your Team Tools To Grow
           </h3>
 
-          <p className="mt-6 w-[70%]   text-[#707070] font-light leading-[33px] text-lg sm:text-center lg:text-left">
+          <p className="mt-6 w-[70%] dark:text-white  text-[#707070] font-light leading-[33px] text-lg sm:text-center lg:text-left">
             Vestibulum commodo sapien non elit porttitor, vitae volutpat nibh
             mollis. Nulla porta risus id neque tempor, in efficitur justo
             imperdiet.
           </p>
         </div>
 
-        <div
-        class="mt-8 w-[30%] flex items-center justify-end green-btn xl:ml-24"
-      >
-        <div class="flex green-btn">
-          <button
-            className=" border border-mainColor text-black hover:bg-mainColor hover:text-white focus:ring-4 transition duration-300 ease-out hover:ease-in font-medium rounded-full text-sm px-7 py-3 mb-2 "
-          >
-            See All Features
-          </button>
+        <div class="mt-8 w-[30%] flex items-center justify-end green-btn xl:ml-24">
+          <div class="flex green-btn">
+            <button className=" border dark:text-white border-mainColor text-black hover:bg-mainColor hover:text-white focus:ring-4 transition duration-300 ease-out hover:ease-in font-medium rounded-full text-sm px-7 py-3 mb-2 ">
+              See All Features
+            </button>
+          </div>
         </div>
-      </div>
       </div>
 
       <motion.div
@@ -70,7 +66,7 @@ const IconSection = () => {
                 <img src={item.icon} alt="" />
               </div>
 
-              <p className="p-3 flex justify-center text-[#292929] text-xl mt-4 font-medium">
+              <p className="p-3 dark:text-white flex justify-center text-[#292929] text-xl mt-4 font-medium">
                 {" "}
                 {item.text}
               </p>

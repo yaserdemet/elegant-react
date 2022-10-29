@@ -11,13 +11,22 @@ import tr from "../assets/images/tr.svg"
 
 function NavBar() {
   const [click, setClick] = useState(false);
-  const { lang, setLang, changeLanguage } = useConsumeContext();
+  const { lang, setLang, changeLanguage, dark, setDark } = useConsumeContext();
   //   // console.log(changeLanguage);
   const { t, i18n } = useTranslation();
 
+  useEffect(() => {
+      if(dark){
+        document.querySelector("html").classList.add("dark")
+      }
+      else{
+        document.querySelector("html").classList.remove("dark")
+      }
+  } , [dark])
+
   const handleClick = () => setClick(!click);
   return (
-    <nav className="navbar sm:w-[75%] pt-4">
+    <nav className="navbar sm:w-[75%] pt-4 ">
       <div className="nav-container">
         <NavLink exact to="/" className="nav-logo">
           <div>
@@ -93,7 +102,7 @@ function NavBar() {
           <li className="nav-item">
             <div className="flex flex-row justify-center  items-strech pt-1">
               <div className="flex flex-row justify-center items-center text-center ">
-                <label htmlFor="language " className="text-center mr-4">
+                <label htmlFor="language " className="text-center mt-1 mr-4">
               {
                 lang == "en" ?  <img src={en} alt="" /> : 
                 <img src={tr} alt="" />
@@ -104,7 +113,7 @@ function NavBar() {
               <div className="flex ">
                 <select
                   name=""
-                  className="block rounded-lg  px-8  text-sm text-gray-500  border-0  appearance-none dark:border-mainColor focus:outline-mainColor  focus:border-mainColor "
+                  className="block rounded-lg  px-4  text-sm text-gray-500  border-0  appearance-none dark:border-mainColor focus:outline-mainColor  focus:border-mainColor "
                   id="language"
                   onChange={(e) => changeLanguage(e.target.value)}
                 >
@@ -123,11 +132,13 @@ function NavBar() {
           </li>
           <li>
           <button
-             
-              class="flex justify-center transition duration-900 items-center hover:bg-gray-200 px-4 border-1 border border-transparent rounded-md duration-300 ease-out hover:ease-in"
+              onClick={() => setDark(!dark)}
+              className="flex justify-center transition duration-900 items-center mt-2 hover:bg-gray-200 px-4 border-1 border border-transparent rounded-md duration-300 ease-out hover:ease-in"
             >
-              <span >🌙</span>
-              <span >☀️</span>
+              {
+                dark ? <span >🌙</span> : 
+                <span >☀️</span>
+              }
             </button>
           </li>
         </ul>

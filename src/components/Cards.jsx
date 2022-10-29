@@ -28,8 +28,8 @@ const Cards = () => {
     }
   }, [inView]);
   return (
-    <div ref={ref} class="bg-[#f5f8ff]">
-    <motion.div animate={animation} className="bg-[#f5f8ff] mt-24 pb-36 mb-6  w-[75%] mx-auto ">
+    <div ref={ref} className="dark:!bg-black bg-[#f5f8ff] ">
+    <motion.div animate={animation} className="bg-[#f5f8ff] dark:bg-black mt-24 pb-36 mb-6  w-[75%] mx-auto ">
       <h4
         className="text-center md:text-3xl  lg:text-4xl font-semibold mb-16 pt-16 text-[#625fd1]"
       >

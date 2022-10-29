@@ -11,6 +11,7 @@ export const useConsumeContext = () => {
 const ContextFile = ({children}) => {
 
     const [lang , setLang] = useState("en")
+    const [dark , setDark] = useState(false)
 
     const changeLanguage = (ln) => {
       setLang(ln)
@@ -19,7 +20,7 @@ const ContextFile = ({children}) => {
 
   return (
     <div>
-      <CreatedContext.Provider value={{lang, setLang,changeLanguage}}>
+      <CreatedContext.Provider value={{lang, setLang,changeLanguage,dark , setDark}}>
 
           {children}
 

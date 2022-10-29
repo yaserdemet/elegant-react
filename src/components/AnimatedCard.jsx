@@ -3,11 +3,11 @@ import AnimatedLogo from "../assets/images/plugin-logo.png";
 
 const AnimatedCard = () => {
   return (
-    <section class="bg-[#f5f8ff]">
+    <section class="bg-[#f5f8ff] dark:!bg-black ">
     <div className=" flex flex-col lg:w-[60%]  mx-auto">
       <div className="mb-24 ">
         <h4
-          className="text-[#625fd1] pt-24 text-4xl  text-center leading-[60px] font-semibold mb-8  "
+          className="text-[#625fd1]  pt-24 text-4xl  text-center leading-[60px] font-semibold mb-8  "
         >
           Boost Your Workflow To Integrate <br />
           Productive Tools & Plugin

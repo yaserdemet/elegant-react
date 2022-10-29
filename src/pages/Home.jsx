@@ -12,9 +12,12 @@ import {motion} from "framer-motion"
 import blop from "../assets/images/moving-shape.svg"
 import GetDemo from "../components/GetDemo";
 import Cards2 from "../components/Cards2";
+import { useConsumeContext } from "../helpers/contextApi/ContextFile";
 
 const Home = () => {
   const [isVisible, setIsVisible] = useState(true);
+  const {dark, setDark} = useConsumeContext();
+
 
   useEffect(() => {
     window.addEventListener("scroll", listenToScroll);
@@ -44,6 +47,7 @@ const Home = () => {
 
   return (
     <div
+   
     >
          <img
       src={blop}
