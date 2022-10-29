@@ -47,6 +47,8 @@ const FirstSection = () => {
              class="focus:outline-none text-white bg-mainColor focus:ring-4 font-medium rounded-full text-sm px-12 py-5 mb-2 transition duration-300 ease-out hover:ease-in"
             >
               Get Started
+              
+
             </button>
 
             <button
