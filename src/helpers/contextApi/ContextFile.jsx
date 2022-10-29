@@ -13,9 +13,8 @@ const ContextFile = ({children}) => {
     const [lang , setLang] = useState("en")
 
     const changeLanguage = (ln) => {
+      setLang(ln)
       return  i18n.changeLanguage(ln)
-          
-      
     }
 
   return (
