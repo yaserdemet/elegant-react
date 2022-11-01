@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import "./App.css";
-import Navbar from "./components/Navbar";
+import Navbar from "./components/Home/Navbar";
 import ContextFile from "./helpers/contextApi/ContextFile";
 import Loading from "./pages/Loading";
 import AppRouter from "./routers/AppRouter";

@@ -383,7 +383,6 @@ input:checked ~ .tab-content {
   }
 }
 @media screen and (max-width: 960px) {
-
   .nav-menu {
     display: flex;
     flex-direction: column;
@@ -424,7 +423,6 @@ input:checked ~ .tab-content {
   }
 }
 
-
 .toggleNav {
   display: none;
   transition: duration-300 ease-out;
@@ -440,13 +438,11 @@ input:checked ~ .tab-content {
   opacity: 0;
 }
 
-
 /*!!!!!!!!!!!!!!!!!!!!!!!!!!! Dark Mode Class !!!!!!!!!!!!!!!!!!!!!!!!!!!!!*/
 /* .dark {
   background-color: black !important;
  
 } */
-
 
 .iconsItem {
   width: 40px;
@@ -466,38 +462,43 @@ input:checked ~ .tab-content {
   line-height: 38px;
 }
 
-
 /* language and darkMode */
-@media screen and (max-width: 1240px) { 
-
+@media screen and (max-width: 1240px) {
   .hideSection {
-      display: none;
+    display: none;
   }
-
-  
 }
 
-:-ms-input-placeholder { /* Internet Explorer 10-11 */
+:-ms-input-placeholder {
+  /* Internet Explorer 10-11 */
   color: red;
 }
 
 /*!! 404 cards animations  */
 
 .notFoundCard {
-  
-    position: absolute;
-    -webkit-animation: banner3Shake 3s linear 0s infinite forwards;
-    animation: banner3Shake 3s linear 0s infinite forwards;
-    animation-duration: 3s;
-    animation-timing-function: linear;
-    animation-delay: 0s;
-    animation-iteration-count: infinite;
-    animation-direction: normal;
-    animation-fill-mode: forwards;
-    animation-play-state: running;
-    animation-name: banner3Shake;
-    left: 5%;
-    top: 20%;
-    z-index: -1;
+  position: absolute;
+  -webkit-animation: banner3Shake 3s linear 0s infinite forwards;
+  animation: banner3Shake 3s linear 0s infinite forwards;
+  animation-duration: 3s;
+  animation-timing-function: linear;
+  animation-delay: 0s;
+  animation-iteration-count: infinite;
+  animation-direction: normal;
+  animation-fill-mode: forwards;
+  animation-play-state: running;
+  animation-name: banner3Shake;
+  left: 5%;
+  top: 20%;
+  z-index: -1;
 }
 
+textarea {
+  resize: none;
+}
+
+.formContent {
+  box-shadow: 9px 8px 15px -3px rgba(0, 0, 0, 0.1),
+    12px 10px 15px -3px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+}
