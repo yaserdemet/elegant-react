@@ -7,11 +7,11 @@ import { useConsumeContext } from "../helpers/contextApi/ContextFile";
 import { motion } from "framer-motion";
 import en from "../assets/images/gb.svg";
 import tr from "../assets/images/tr.svg";
-import {useNavigate} from "react-router-dom"
+import { useNavigate } from "react-router-dom";
 
 function NavBar() {
   const [click, setClick] = useState(false);
-  const navigate = useNavigate()
+  const navigate = useNavigate();
   const { lang, setLang, changeLanguage, dark, setDark } = useConsumeContext();
   const { t, i18n } = useTranslation();
 
@@ -27,7 +27,11 @@ function NavBar() {
   return (
     <nav className="navbar sm:w-[80%] pt-4 ">
       <div className="nav-container">
-        <NavLink exact to="/" className="nav-logo">
+        <NavLink
+          exact
+          to="/"
+          className="nav-logo"
+        >
           <div>
             {dark ? (
               <motion.img
@@ -48,9 +52,8 @@ function NavBar() {
         <ul className={click ? "nav-menu active" : "nav-menu"}>
           <li className="nav-item img">
             <NavLink
-              exact
+             
               to="/"
-              activeClassName="active"
               className="nav-links  text-black hover:text-mainColor text-center text-2xl block px-3 py-2 rounded-md font-medium transition duration-300 ease-out hover:ease-in"
               onClick={handleClick}
             >
@@ -64,9 +67,9 @@ function NavBar() {
 
           <li className="nav-item ">
             <NavLink
-              exact
+              style={({ isActive }) => ({ color: isActive ? "#00AE7B" : "black" })}
+              // exact
               to="/"
-              activeClassName="active"
               className="nav-links dark:text-white text-black hover:text-mainColor text-center text-2xl block px-3 py-2 rounded-md font-medium transition duration-300 ease-out hover:ease-in"
               onClick={handleClick}
             >
@@ -75,9 +78,9 @@ function NavBar() {
           </li>
           <li className="nav-item">
             <NavLink
-              exact
-              to=""
-              activeClassName="active"
+              style={({ isActive }) => ({ color: isActive ? "#00AE7B" : undefined })}
+              to="/about"
+             
               className="nav-links text-black hover:text-mainColor text-center text-2xl  block px-3 py-2 rounded-md font-medium transition duration-300 ease-out hover:ease-in"
               onClick={handleClick}
             >
@@ -86,9 +89,9 @@ function NavBar() {
           </li>
           <li className="nav-item">
             <NavLink
-              exact
-              to=""
-              activeClassName="active"
+              style={({ isActive }) => ({ color: isActive && "#00AE7B" })}
+             
+              to="/newPage"
               className="nav-links text-black  text-center hover:text-mainColor text-2xl  block px-3 py-2 rounded-md font-medium transition duration-300 ease-out hover:ease-in"
               onClick={handleClick}
             >
@@ -143,12 +146,10 @@ function NavBar() {
           </li> */}
           <li className="nav-item">
             <NavLink
-             
-              exact
-              to="/career"
-              activeClassName="active"
-              className="nav-links dark:text-white text-black hover:text-mainColor text-center text-2xl block px-3 py-2 rounded-md font-medium transition duration-300 ease-out hover:ease-in"
               
+              style={({ isActive }) => ({ color: isActive && "#00AE7B" })}
+              to="/career"
+              className="nav-links dark:text-white text-black hover:text-mainColor text-center text-2xl block px-3 py-2 rounded-md font-medium transition duration-300 ease-out hover:ease-in"
             >
               {t("nav4")}
             </NavLink>

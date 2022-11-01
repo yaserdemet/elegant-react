@@ -16,7 +16,6 @@ import { useConsumeContext } from "../helpers/contextApi/ContextFile";
 // import Modal from "../components/Modal";
 import NavBar from "../components/Navbar";
 import Footer from "../components/Footer";
-
 const Home = () => {
   const [isVisible, setIsVisible] = useState(true);
   const {dark, setDark} = useConsumeContext();
@@ -47,10 +46,14 @@ const Home = () => {
       behavior : "smooth"
     })
   }
-
+  
   return (
-    <div
-   
+    <motion.div
+   initial={{opacity : 0}}
+   animate={{opacity : 1}}
+   exit ={{opacity : 0 }}
+    transition ={{type : "spring" , duration : 3 }}
+ 
     >
       <NavBar />
          <img
@@ -82,7 +85,7 @@ const Home = () => {
       <Questions />
       <Footer />
      
-    </div>
+    </motion.div>
   );
 };
 
