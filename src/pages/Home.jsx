@@ -13,7 +13,9 @@ import blop from "../assets/images/moving-shape.svg"
 import GetDemo from "../components/GetDemo";
 import Cards2 from "../components/Cards2";
 import { useConsumeContext } from "../helpers/contextApi/ContextFile";
-import Modal from "../components/Modal";
+// import Modal from "../components/Modal";
+import NavBar from "../components/Navbar";
+import Footer from "../components/Footer";
 
 const Home = () => {
   const [isVisible, setIsVisible] = useState(true);
@@ -50,6 +52,7 @@ const Home = () => {
     <div
    
     >
+      <NavBar />
          <img
       src={blop}
       class="absolute top-0 right-0 z-[-1] xl:w-[60%] lg:w-[100%]"
@@ -77,6 +80,7 @@ const Home = () => {
       <Cards2 />
       <AnimatedCard />
       <Questions />
+      <Footer />
      
     </div>
   );

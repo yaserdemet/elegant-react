@@ -5,27 +5,23 @@ import Logo2 from "../assets/images/logo-bg-dark.png";
 import { useTranslation } from "react-i18next";
 import { useConsumeContext } from "../helpers/contextApi/ContextFile";
 import { motion } from "framer-motion";
-import en from "../assets/images/gb.svg"
-import tr from "../assets/images/tr.svg"
-import Modal from "./Modal"
-
+import en from "../assets/images/gb.svg";
+import tr from "../assets/images/tr.svg";
+import {useNavigate} from "react-router-dom"
 
 function NavBar() {
   const [click, setClick] = useState(false);
-  const [popUp , setPopUp] = useState(false);
-  console.log(popUp)
+  const navigate = useNavigate()
   const { lang, setLang, changeLanguage, dark, setDark } = useConsumeContext();
-  //   // console.log(changeLanguage);
   const { t, i18n } = useTranslation();
 
   useEffect(() => {
-      if(dark){
-        document.querySelector("html").classList.add("dark")
-      }
-      else{
-        document.querySelector("html").classList.remove("dark")
-      }
-  } , [dark])
+    if (dark) {
+      document.querySelector("html").classList.add("dark");
+    } else {
+      document.querySelector("html").classList.remove("dark");
+    }
+  }, [dark]);
 
   const handleClick = () => setClick(!click);
   return (
@@ -33,17 +29,19 @@ function NavBar() {
       <div className="nav-container">
         <NavLink exact to="/" className="nav-logo">
           <div>
-                {
-                  dark ? (      <motion.img
-                    class=" h-10 w-auto lg:block cursor-pointer"
-                    src={Logo2}
-                    alt="Elegant Software"
-                  /> ) : (      <motion.img
-                    class=" h-10 w-auto lg:block cursor-pointer"
-                    src={Logo1}
-                    alt="Elegant Software"
-                  />)
-                }
+            {dark ? (
+              <motion.img
+                class=" h-10 w-auto lg:block cursor-pointer"
+                src={Logo2}
+                alt="Elegant Software"
+              />
+            ) : (
+              <motion.img
+                class=" h-10 w-auto lg:block cursor-pointer"
+                src={Logo1}
+                alt="Elegant Software"
+              />
+            )}
           </div>
         </NavLink>
 
@@ -94,36 +92,19 @@ function NavBar() {
               className="nav-links text-black  text-center hover:text-mainColor text-2xl  block px-3 py-2 rounded-md font-medium transition duration-300 ease-out hover:ease-in"
               onClick={handleClick}
             >
-              Blog
+              {t("nav2")}
             </NavLink>
           </li>
-          <li className="nav-item">
-            <NavLink
-              onClick={() => setPopUp(!popUp)}
-              exact
-              to=""
-              activeClassName="active"
-              className="nav-links text-black  text-center hover:text-mainColor text-2xl  block px-3 py-2 rounded-md font-medium transition duration-300 ease-out hover:ease-in"
-              // onClick={handleClick}
-            >
-             {t("nav4")}
-            </NavLink>
-         
-          </li>
-          <li>
-              {
-                popUp && <Modal popUp={popUp} setPopUp={setPopUp}/> 
-              }
-            </li>
+
           <li className="nav-item hideSection">
             <div className="flex flex-row justify-center  items-strech pt-1">
               <div className="flex flex-row justify-center items-center text-center ">
                 <label htmlFor="language " className="text-center mt-1 mr-4">
-              {
-                lang == "en" ?  <img src={en} alt="" /> : 
-                <img src={tr} alt="" />
-              }
-
+                  {lang == "en" ? (
+                    <img src={en} alt="" />
+                  ) : (
+                    <img src={tr} alt="" />
+                  )}
                 </label>
               </div>
               <div className="flex ">
@@ -146,7 +127,10 @@ function NavBar() {
               </div>
             </div>
           </li>
-          <li className="hideSection">
+
+          {/* DARK AND LIGHT MODE */}
+
+          {/* <li className="hideSection">
           <button
               onClick={() => setDark(!dark)}
               className="flex justify-center transition duration-900 items-center mt-2 hover:bg-gray-200 px-4 border-1 border border-transparent rounded-md duration-300 ease-out hover:ease-in"
@@ -156,6 +140,18 @@ function NavBar() {
                 <span >☀️</span>
               }
             </button>
+          </li> */}
+          <li className="nav-item">
+            <NavLink
+             
+              exact
+              to="/career"
+              activeClassName="active"
+              className="nav-links dark:text-white text-black hover:text-mainColor text-center text-2xl block px-3 py-2 rounded-md font-medium transition duration-300 ease-out hover:ease-in"
+              
+            >
+              {t("nav4")}
+            </NavLink>
           </li>
         </ul>
         <div className="nav-icon" onClick={handleClick}>

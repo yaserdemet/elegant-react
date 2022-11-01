@@ -440,10 +440,12 @@ input:checked ~ .tab-content {
   opacity: 0;
 }
 
-.dark {
+
+/*!!!!!!!!!!!!!!!!!!!!!!!!!!! Dark Mode Class !!!!!!!!!!!!!!!!!!!!!!!!!!!!!*/
+/* .dark {
   background-color: black !important;
-  /* color: white; */
-}
+ 
+} */
 
 
 .iconsItem {
@@ -472,4 +474,31 @@ input:checked ~ .tab-content {
       display: none;
   }
 
+  
 }
+
+:-ms-input-placeholder { /* Internet Explorer 10-11 */
+  color: red;
+}
+
+/*!! 404 cards animations  */
+
+.notFoundCard {
+  
+    position: absolute;
+    -webkit-animation: banner3Shake 3s linear 0s infinite forwards;
+    animation: banner3Shake 3s linear 0s infinite forwards;
+    animation-duration: 3s;
+    animation-timing-function: linear;
+    animation-delay: 0s;
+    animation-iteration-count: infinite;
+    animation-direction: normal;
+    animation-fill-mode: forwards;
+    animation-play-state: running;
+    animation-name: banner3Shake;
+    left: 5%;
+    top: 20%;
+    z-index: -1;
+}
+
+
