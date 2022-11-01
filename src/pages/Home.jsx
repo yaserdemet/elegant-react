@@ -13,7 +13,6 @@ import blop from "../assets/images/moving-shape.svg";
 import GetDemo from "../components/Home/GetDemo";
 import Cards2 from "../components/Home/Cards2";
 import { useConsumeContext } from "../helpers/contextApi/ContextFile";
-// import Modal from "../components/Modal";
 import NavBar from "../components/Home/Navbar";
 import Footer from "../components/Home/Footer";
 const Home = () => {
@@ -46,10 +45,17 @@ const Home = () => {
     });
   };
 
+
+  useEffect(() => {
+    document.title = "Elegant Home"
+  } , [])
+
   return (
     <motion.div
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
+      // initial={{ strokeOpacity: 0 }}
+      // animate={{ strokeOpacity: 1 }}
       exit={{ opacity: 0 }}
       transition={{ type: "spring", duration: 3 }}
     >
@@ -71,7 +77,6 @@ const Home = () => {
       )}
       <Wave />
       <FirstSection />
-
       <IconSection />
       <Cards />
       <Projects />

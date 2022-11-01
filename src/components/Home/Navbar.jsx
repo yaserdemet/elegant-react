@@ -1,4 +1,4 @@
-import { NavLink } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 import React, { useEffect, useState } from "react";
 import Logo1 from "../../assets/images/logo-bg-white.png";
 import Logo2 from "../../assets/images/logo-bg-dark.png";
@@ -27,7 +27,7 @@ function NavBar() {
   return (
     <nav className="navbar sm:w-[80%] pt-4 ">
       <div className="nav-container">
-        <NavLink exact to="/" className="nav-logo">
+        <Link to="/" className="nav-logo">
           <div>
             {dark ? (
               <motion.img
@@ -43,11 +43,11 @@ function NavBar() {
               />
             )}
           </div>
-        </NavLink>
+        </Link>
 
         <ul className={click ? "nav-menu active" : "nav-menu"}>
           <li className="nav-item img">
-            <NavLink
+            <Link
               to="/"
               className="nav-links  text-black hover:text-mainColor text-center text-2xl block px-3 py-2 rounded-md font-medium transition duration-300 ease-out hover:ease-in"
               onClick={handleClick}
@@ -57,17 +57,15 @@ function NavBar() {
                 src={Logo1}
                 alt="Elegant Software"
               />
-            </NavLink>
+            </Link>
           </li>
 
           <li className="nav-item ">
             <NavLink
-              style={({ isActive }) => ({
-                color: isActive ? "#00AE7B" : "black",
-              })}
-              // exact
+              style={({ isActive }) => ({ color: isActive && "#00AE7B" })}
               to="/"
-              className="nav-links dark:text-white text-black hover:text-mainColor text-center text-2xl block px-3 py-2 rounded-md font-medium transition duration-300 ease-out hover:ease-in"
+              aria-current="page"
+              className="nav-link  active text-black   text-center text-2xl block px-3 py-2 rounded-md font-medium transition duration-300 ease-out hover:ease-in"
               onClick={handleClick}
             >
               {t("nav1")}
@@ -76,11 +74,12 @@ function NavBar() {
           <li className="nav-item">
             <NavLink
               style={({ isActive }) => ({
-                color: isActive ? "#00AE7B" : undefined,
+                color: isActive && "#00AE7B",
               })}
               to="/about"
-              className="nav-links text-black hover:text-mainColor text-center text-2xl  block px-3 py-2 rounded-md font-medium transition duration-300 ease-out hover:ease-in"
+              className="nav-link text-black hover:text-mainColor text-center text-2xl  block px-3 py-2 rounded-md font-medium transition duration-300 ease-out hover:ease-in"
               onClick={handleClick}
+              aria-current="page"
             >
               {t("nav3")}
             </NavLink>
@@ -89,8 +88,9 @@ function NavBar() {
             <NavLink
               style={({ isActive }) => ({ color: isActive && "#00AE7B" })}
               to="/contact"
-              className="nav-links text-black  text-center hover:text-mainColor text-2xl  block px-3 py-2 rounded-md font-medium transition duration-300 ease-out hover:ease-in"
+              className="nav-link text-black  text-center hover:text-mainColor text-2xl  block px-3 py-2 rounded-md font-medium transition duration-300 ease-out hover:ease-in"
               onClick={handleClick}
+              aria-current="page"
             >
               {t("nav2")}
             </NavLink>
@@ -110,14 +110,17 @@ function NavBar() {
               <div className="flex">
                 <select
                   name=""
-                  className="block rounded-lg  px-4  text-sm text-gray-500  border border-mainColor appearance-none dark:border-mainColor focus:outline-none  focus:border-mainColor "
+                  className="block   px-4  text-sm border-b-2 text-gray-500 border-bottom appearance-none dark:border-mainColor focus:outline-none  focus:border-mainColor "
                   id="language"
                   onChange={(e) => changeLanguage(e.target.value)}
                 >
                   <option className="border-none" value="">
                     Select Language
                   </option>
-                  <option className="text-black" value="en">
+                  <option
+                    className="text-black"
+                    value="en">
+                  
                     English
                   </option>
                   <option value="tr" className="hover:bg-mainColor px-16">
@@ -145,7 +148,8 @@ function NavBar() {
             <NavLink
               style={({ isActive }) => ({ color: isActive && "#00AE7B" })}
               to="/career"
-              className="nav-links dark:text-white text-black hover:text-mainColor text-center text-2xl block px-3 py-2 rounded-md font-medium transition duration-300 ease-out hover:ease-in"
+              aria-current="page"
+              className="nav-link dark:text-white text-black hover:text-mainColor text-center text-2xl block px-3 py-2 rounded-md font-medium transition duration-300 ease-out hover:ease-in"
             >
               {t("nav4")}
             </NavLink>

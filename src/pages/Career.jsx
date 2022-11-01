@@ -7,6 +7,9 @@ import { motion } from "framer-motion";
 
 const Career = () => {
   const [isVisible, setIsVisible] = useState(true);
+  useEffect(() => {
+    document.title = "Elegant Career";
+  }, []);
 
   useEffect(() => {
     window.addEventListener("scroll", listenToScroll);

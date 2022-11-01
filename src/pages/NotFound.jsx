@@ -1,10 +1,13 @@
-import React from "react";
+import React, { useEffect } from "react";
 import notFounded from "../assets/images/404.png";
 import animatedIcon from "../assets/images/404-icon1.png";
 import { useNavigate } from "react-router-dom";
 
 const NotFound = () => {
   const navigate = useNavigate();
+  useEffect(() => {
+    document.title = "Elegant 404"
+  } , [])
 
   return (
     <main className="flex md:flex-row md:justify-end sm:flex-col sm:justify-center flex-wrap">
@@ -23,7 +26,7 @@ const NotFound = () => {
               onClick={() => navigate(-1)}
               className="text-[#625fd1] font-bold ml-2"
             >
-              Go back
+           <i class="fa-solid fa-chevron-left"></i>   Go back
             </button>
           </p>
 

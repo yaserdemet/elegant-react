@@ -45,8 +45,10 @@ const IconSection = () => {
 
         <div class="mt-8 w-[30%] flex items-center justify-end green-btn xl:ml-24">
           <div class="flex green-btn">
-            <button className=" border dark:text-white border-mainColor text-black hover:bg-mainColor hover:text-white focus:ring-4 transition duration-300 ease-out hover:ease-in font-medium rounded-full text-sm px-7 py-3 mb-2 ">
+            <button 
+            className=" border dark:text-white border-mainColor text-black hover:bg-mainColor hover:text-white focus:ring-4 transition duration-300 ease-out hover:ease-in font-medium rounded-full text-sm px-7 py-3 mb-2 ">
               See All Features
+   
             </button>
           </div>
         </div>
