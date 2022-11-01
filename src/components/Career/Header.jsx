@@ -7,9 +7,9 @@ import icon4 from "../../assets/images/career/bread4.png";
 const Header = () => {
   return (
     <header className="bg-[#ecf7ff] relative  py-24">
-      <div className=" bg-[##ecf7ff] z-10" style={{zIndex : "-20"}}>
-      <img src={icon1} alt="" className="absolute left-[5%] top-[10%] " />
-      <img src={icon1} alt="" className="absolute right-[15%] bottom-[3%] " />
+      <div className=" bg-[##ecf7ff] z-10" style={{ zIndex: "-20" }}>
+        <img src={icon1} alt="" className="absolute left-[5%] top-[10%] " />
+        <img src={icon1} alt="" className="absolute right-[15%] bottom-[3%] " />
 
         <img
           src={icon2}
@@ -23,7 +23,7 @@ const Header = () => {
           className="absolute right-[20%] top-[10%] z-0 overflow-hidden"
         />
 
-<img src={icon3}  alt="" className="absolute right-[5%] top-[3%] z-0" />
+        <img src={icon3} alt="" className="absolute right-[5%] top-[3%] z-0" />
 
         <img
           src={icon4}
