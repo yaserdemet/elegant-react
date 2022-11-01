@@ -489,7 +489,7 @@ input:checked ~ .tab-content {
   animation-play-state: running;
   animation-name: banner3Shake;
   left: 5%;
-  top: 20%;
+  top: 5%;
   z-index: -1;
 }
 

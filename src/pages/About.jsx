@@ -4,10 +4,11 @@ import NavBar from "../components/Home/Navbar";
 import Footer from "../components/Home/Footer";
 import Header from "../components/About/Header";
 import FirstSection from "../components/About/FirstSection";
+import Cards from "../components/About/Cards";
 
 const About = () => {
   return (
-    <section
+    <motion.section
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       // initial={{ strokeOpacity: 0 }}
@@ -18,9 +19,9 @@ const About = () => {
       <NavBar />
       <Header />
       <FirstSection />
-
+      <Cards />
       <Footer />
-    </section>
+    </motion.section>
   );
 };
 
