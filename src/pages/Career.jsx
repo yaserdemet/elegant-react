@@ -4,38 +4,10 @@ import Main from "../components/Career/Main";
 import Footer from "../components/Home/Footer";
 import NavBar from "../components/Home/Navbar";
 import { motion } from "framer-motion";
+import Scroll from "../utils/Scroll";
 
 const Career = () => {
-  const [isVisible, setIsVisible] = useState(true);
-  useEffect(() => {
-    document.title = "Elegant Career";
-  }, []);
-
-  useEffect(() => {
-    window.addEventListener("scroll", listenToScroll);
-    // console.log("dadwad")
-    return () => window.removeEventListener("scroll", listenToScroll);
-  }, []);
-
-  const listenToScroll = () => {
-    let heightToHideFrom = 300;
-    const winScroll =
-      document.body.scrollTop || document.documentElement.scrollTop;
-
-    if (winScroll > heightToHideFrom) {
-      isVisible && // to limit setting state only the first time
-        setIsVisible(false);
-    } else {
-      setIsVisible(true);
-    }
-  };
-
-  const handleClick = () => {
-    window.scrollTo({
-      top: 0,
-      behavior: "smooth",
-    });
-  };
+ 
 
   return (
     <motion.main
@@ -44,7 +16,9 @@ const Career = () => {
       exit={{ opacity: 0 }}
       transition={{ type: "spring", duration: 3 }}
     >
-      {!isVisible && (
+
+      {/*  This Section was turned into another component  */}
+      {/* {!isVisible && (
         <a
           onClick={handleClick}
           // href="#navbar"
@@ -53,7 +27,9 @@ const Career = () => {
           {" "}
           <i className="fa fa-angle-up text-white"></i>{" "}
         </a>
-      )}
+      )} */}
+
+      <Scroll />
       <NavBar />
       <Header />
       <Main />

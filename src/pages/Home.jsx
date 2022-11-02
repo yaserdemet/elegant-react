@@ -15,40 +15,12 @@ import Cards2 from "../components/Home/Cards2";
 import { useConsumeContext } from "../helpers/contextApi/ContextFile";
 import NavBar from "../components/Home/Navbar";
 import Footer from "../components/Home/Footer";
+import Scroll from "../utils/Scroll";
 const Home = () => {
-  const [isVisible, setIsVisible] = useState(true);
-  const { dark, setDark } = useConsumeContext();
 
   useEffect(() => {
-    window.addEventListener("scroll", listenToScroll);
-    // console.log("dadwad")
-    return () => window.removeEventListener("scroll", listenToScroll);
+    document.title = "Elegant Home";
   }, []);
-
-  const listenToScroll = () => {
-    let heightToHideFrom = 500;
-    const winScroll =
-      document.body.scrollTop || document.documentElement.scrollTop;
-
-    if (winScroll > heightToHideFrom) {
-      isVisible && // to limit setting state only the first time
-        setIsVisible(false);
-    } else {
-      setIsVisible(true);
-    }
-  };
-
-  const handleClick = () => {
-    window.scrollTo({
-      top: 0,
-      behavior: "smooth",
-    });
-  };
-
-
-  useEffect(() => {
-    document.title = "Elegant Home"
-  } , [])
 
   return (
     <motion.div
@@ -65,7 +37,7 @@ const Home = () => {
         class="absolute top-0 right-0 z-[-1] xl:w-[60%] lg:w-[100%]"
         alt=""
       />
-      {!isVisible && (
+      {/* {!isVisible && (
         <a
           onClick={handleClick}
           // href="#navbar"
@@ -74,7 +46,8 @@ const Home = () => {
           {" "}
           <i className="fa fa-angle-up text-white"></i>{" "}
         </a>
-      )}
+      )} */}
+      <Scroll />
       <Wave />
       <FirstSection />
       <IconSection />

@@ -5,6 +5,9 @@ import Footer from "../components/Home/Footer";
 import Header from "../components/About/Header";
 import FirstSection from "../components/About/FirstSection";
 import Cards from "../components/About/Cards";
+import PurpleSection from "../components/About/PurpleSection";
+import Scroll from "../utils/Scroll";
+// import Counter from "../components/About/Counter";
 
 const About = () => {
   return (
@@ -17,9 +20,12 @@ const About = () => {
       transition={{ type: "spring", duration: 3 }}
     >
       <NavBar />
+      <Scroll />
       <Header />
       <FirstSection />
       <Cards />
+      {/* <Counter /> */}
+      <PurpleSection />
       <Footer />
     </motion.section>
   );

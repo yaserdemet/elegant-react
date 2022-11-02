@@ -4,13 +4,10 @@ import icon2 from "../../assets/images/career/bread2.png";
 import icon3 from "../../assets/images/career/bread3.png";
 import icon4 from "../../assets/images/career/bread4.png";
 
-const Header = () => {
+const PurpleSection = () => {
   return (
-    <header className="bg-[#ecf7ff] relative  py-24">
+    <section className="bg-[#5f52dc] relative  py-36">
       <div className=" bg-[##ecf7ff] z-10" style={{ zIndex: "-20" }}>
-        <img src={icon1} alt="" className="absolute left-[5%] top-[10%] " />
-        <img src={icon1} alt="" className="absolute right-[15%] bottom-[3%] " />
-        <div className=" bg-[##ecf7ff] z-10" style={{ zIndex: "-20" }}>
         <div className = "absolute top-15 right-60">
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -157,35 +154,21 @@ const Header = () => {
         />
       </div>
 
-        <img
-          src={icon2}
-          alt=""
-          className="absolute left-[15%] bottom-[0%] z-0"
-        />
-        <img src={icon3} alt="" className="absolute left-[35%] top-[63%] z-0" />
-        <img
-          src={icon4}
-          alt=""
-          className="absolute right-[20%] top-[10%] z-0 overflow-hidden"
-        />
-
-        <img src={icon3} alt="" className="absolute right-[5%] top-[3%] z-0" />
-
-        <img
-          src={icon4}
-          alt=""
-          className="absolute left-[0%] top-[30%] z-0 overflow-hidden"
-        />
-      </div>
-
       <div className="w-[80%] mx-auto text-center  z-20">
-        <h5 className="font-bold text-4xl text-black z-20">
-          About Us
+        <h5 className="font-bold text-4xl text-white z-20">
+          Start Using Analyze To Grow Your Reach, <br /> Engagement and Sales.
         </h5>
-        <p className="mt-8 text-black text-2xl">Home / about</p>
+        <div className="mt-8 text-black text-2xl">
+          <button
+            type="button"
+            class="bg-[#ff4d8c] font-medium text-white hover:white transition duration-300 ease-out hover:ease-in rounded-full text-sm border-2 border-[#ff4d8c] px-16  py-6"
+          >
+            Get Demo
+          </button>
+        </div>
       </div>
-    </header>
+    </section>
   );
 };
 
-export default Header;
+export default PurpleSection;

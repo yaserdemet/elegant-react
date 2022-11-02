@@ -10,6 +10,7 @@ const Banner= () => {
       <div className=" bg-[##ecf7ff] z-10" style={{ zIndex: "-20" }}>
         <img src={icon1} alt="" className="absolute left-[5%] top-[10%] " />
         <img src={icon1} alt="" className="absolute right-[15%] bottom-[3%] " />
+        
 
         <img
           src={icon2}

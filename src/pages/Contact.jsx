@@ -5,6 +5,7 @@ import Map from "../components/Contact/Map";
 import Footer from "../components/Home/Footer";
 import NavBar from "../components/Home/Navbar";
 import {motion} from "framer-motion"
+import Scroll from "../utils/Scroll";
 
 const Contact = () => {
 
@@ -19,6 +20,7 @@ const Contact = () => {
     transition={{ type: "spring", duration: 3 }}
     >
       <NavBar />
+      <Scroll />
       <Banner />
       <Form />
       <Map />
