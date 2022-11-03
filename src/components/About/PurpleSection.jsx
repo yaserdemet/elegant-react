@@ -8,7 +8,7 @@ const PurpleSection = () => {
   return (
     <section className="bg-[#5f52dc] relative  py-36">
       <div className=" bg-[##ecf7ff] z-10" style={{ zIndex: "-20" }}>
-        <div className = "absolute top-15 right-60">
+        <div className = "absolute top-96 right-80">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             width="74.044"
@@ -155,10 +155,10 @@ const PurpleSection = () => {
       </div>
 
       <div className="w-[80%] mx-auto text-center  z-20">
-        <h5 className="font-bold text-4xl text-white z-20">
+        <h5 className="font-bold text-4xl text-white mb-24 z-20">
           Start Using Analyze To Grow Your Reach, <br /> Engagement and Sales.
         </h5>
-        <div className="mt-8 text-black text-2xl">
+        <div className="mt-12 text-black text-2xl">
           <button
             type="button"
             class="bg-[#ff4d8c] font-medium text-white hover:white transition duration-300 ease-out hover:ease-in rounded-full text-sm border-2 border-[#ff4d8c] px-16  py-6"

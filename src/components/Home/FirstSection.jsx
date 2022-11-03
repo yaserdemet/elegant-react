@@ -43,9 +43,9 @@ const FirstSection = () => {
           </div>
         </div>
 
-        <div class="z-10 relative d-flex  md:w-[100%] lg:w-[50%] xl:w-[50%]  md:flex">
-          <div class="w-[100%] flex items-bottom lg:pt-16">
-            <img src={Logo} class=" object contain" data-rjs="2" alt="" />
+        <div class="z-10 relative flex  md:w-[100%]  xl:w-[50%]  md:flex">
+          <div class="h-[100%] flex items-bottom ">
+            <img src={Logo} className=" object-contain" data-rjs="2" alt="" />
           </div>
         </div>
       </div>

@@ -34,7 +34,7 @@ const Home = () => {
       <NavBar />
       <img
         src={blop}
-        class="absolute top-0 right-0 z-[-1] xl:w-[60%] lg:w-[100%]"
+        className="absolute top-0 right-0 z-[-1] xl:w-[60%] lg:w-[100%]"
         alt=""
       />
       {/* {!isVisible && (

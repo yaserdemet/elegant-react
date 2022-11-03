@@ -11,7 +11,7 @@ const Header = () => {
         <img src={icon1} alt="" className="absolute left-[5%] top-[10%] " />
         <img src={icon1} alt="" className="absolute right-[15%] bottom-[3%] " />
         <div className=" bg-[##ecf7ff] z-10" style={{ zIndex: "-20" }}>
-        <div className = "absolute top-15 right-60">
+        <div className = "absolute top-5 right-60">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             width="74.044"
@@ -157,11 +157,7 @@ const Header = () => {
         />
       </div>
 
-        <img
-          src={icon2}
-          alt=""
-          className="absolute left-[15%] bottom-[0%] z-0"
-        />
+      
         <img src={icon3} alt="" className="absolute left-[35%] top-[63%] z-0" />
         <img
           src={icon4}
