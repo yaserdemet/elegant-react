@@ -11,7 +11,7 @@ const Header = () => {
         <img src={icon1} alt="" className="absolute left-[5%] top-[10%] " />
         <img src={icon1} alt="" className="absolute right-[15%] bottom-[3%] " />
         <div className=" bg-[##ecf7ff] z-10" style={{ zIndex: "-20" }}>
-        <div className = "absolute top-5 right-60">
+        <div className = "absolute top-5 right-60 hidden md:inline-block">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             width="74.044"
