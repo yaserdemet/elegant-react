@@ -8,7 +8,9 @@ import Contact from "../pages/Contact";
 import Home from "../pages/Home";
 import NotFound from "../pages/NotFound";
 
+
 const AppRouter = () => {
+    {/*const Career = lazy(() => import("../pages/Career")) */}
   return (
     <BrowserRouter>
       {/* <Navbar /> */}
