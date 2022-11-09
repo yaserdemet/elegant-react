@@ -10,7 +10,8 @@ import NotFound from "../pages/NotFound";
 
 
 const AppRouter = () => {
-    {/*const Career = lazy(() => import("../pages/Career")) */}
+    {/*const Career = lazy(() => import("../pages/Career")) */
+//      wrap with suspense all route
   return (
     <BrowserRouter>
       {/* <Navbar /> */}
